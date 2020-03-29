@@ -12,7 +12,39 @@ find . -type d -name “.git”|xargs rm -rf
 
 
 
+Command line instructions
 
+
+Git global setup
+
+git config --global user.name "xiaotuan"
+git config --global user.email "734871221@qq.com"
+
+Create a new repository
+
+git clone http://158.1.0.148/xiaotuan/EnterpriseMobileBank.git
+cd EnterpriseMobileBank
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+
+Existing folder
+
+cd existing_folder
+git init
+git remote add origin http://158.1.0.148/xiaotuan/EnterpriseMobileBank.git // git remote rm origin
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+
+Existing Git repository
+
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin http://158.1.0.148/xiaotuan/EnterpriseMobileBank.git
+git push -u origin --all
+git push -u origin --tags
 
 
 
@@ -61,3 +93,17 @@ M        product
 我们需要提交，然后这个svn:ignore属性才会起作用
 svn ci -m '忽略test.php文件'
 这时候，无论你如何修改test.php文件，再使用svn st时，也不会出现修改提示符合M了。
+
+
+
+
+
+
+
+
+
+
+
+清空剪切板  pbcopy < /dev/null
+
+
